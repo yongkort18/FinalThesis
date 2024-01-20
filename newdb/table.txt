@@ -1,0 +1,58 @@
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `Intro` varchar(1000) NOT NULL,
+  `Location` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Phone` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+CREATE TABLE `maintenance` (
+  `id` int(11) NOT NULL,
+  `titlepage` varchar(255) NOT NULL,
+  `navcolor` varchar(255) NOT NULL,
+  `bgcolor` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+REATE TABLE `menu` (
+  `id` int(11) NOT NULL,
+  `foodname` varchar(255) NOT NULL,
+  `foodtype` varchar(255) NOT NULL,
+  `foodprice` int(11) NOT NULL,
+  `foodserving` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+CREATE TABLE `review` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int(1) NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+
+CREATE TABLE `tbl_admin_account` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `type` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+CREATE TABLE `tbl_faq` (
+  `id` int(11) NOT NULL,
+  `question` varchar(255) NOT NULL,
+  `answer` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+CREATE TABLE `tbl_about` (
+  `id` int(11) NOT NULL,
+  `heading` varchar(255) NOT NULL,
+  `paragraph` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
